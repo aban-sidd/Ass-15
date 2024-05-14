@@ -1,0 +1,273 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* loader */
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 2;
+    transition: opactiy 0.75s visibility 0.75s;
+}
+
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: '';
+    height: 75px;
+    width: 75px;
+    border: 15px solid rgb(12, 12, 238);
+    border-top-color: aqua;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from {transform: rotate(0turn);}
+    to {transform: rotate(1turn);}
+}
+
+/* loader End */
+
+
+/* Navbar */
+
+.bg-img{
+    background-image: url(1346366.png);
+    min-width: 100%;
+    min-height: 800px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar ,button{
+    position: absolute;
+    right: 20px;
+}
+
+/* Navbar End */
+
+
+/* Height  */
+.hero-cus-h,.sec-1-cus-h,.sec-2-cus-h,.sec-5-cus-h{
+    min-height: 600px;
+}
+
+.slider{
+    min-height: 100px;
+}
+
+.sec-3-cus-h{
+    min-height: 650px;
+}
+
+.sec-4-cus-h{
+    min-height: 40vh;
+}
+/* Height End */
+
+/* hero sec */
+.bi-shop-window ,.bi-bar-chart-line, .bi-calendar-minus,.bi-easel2 , .bi-database{
+    font-size: 30px;
+    color: yellow;
+}
+
+.hero-h3{
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hero-h3:hover{
+    color: yellow;
+    
+}
+
+.second-bor{
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.second-bor:hover{
+    border: 1px solid #ffc451;
+}
+
+/* hero sec End */
+
+/* Slider */
+.swiper {
+    margin: 15px 0px 15px 0px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px 20px whitesmoke;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .swiper-slide img {
+    display: block;
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: 0.6s;
+    cursor: pointer;
+    position: relative;
+    top: 25px;
+  }
+
+  .swiper-slide img:hover{
+    opacity: 1;
+  }
+
+/* Slider End */
+
+/* sec-2 */
+
+
+.bi-file-text-fill,.bi-box,.bi-image,.bi-file-earmark-pdf{
+    color: rgb(192, 192, 14);
+    font-size: 40px;
+    margin-right: 10px;
+}
+/* sec-2 End */
+
+/* sec-3 */
+
+.bi-0-circle,.bi-building,.bi-gpu-card,.bi-globe-americas,.bi-speedometer2,.bi-file-earmark-medical-fill{
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 40px;
+    background-color: #ffc451;;
+}
+
+.card-cus .card{
+    width: 25rem; 
+}
+
+
+.card-title{
+    margin: 50px;
+}
+
+.card-text ,h5{
+    margin-top: 20px;
+}
+
+
+.card-cus ,.card-text{
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card-cus ,.card-text:hover{
+    color:  #ffc451;
+}
+
+
+.card-cus ,.card{
+    transition: 0.3s linear;
+}
+
+.cards-cus ,.card:hover{
+transform: translateY(-1.5rem);
+}
+
+/* sec-4 */
+
+.bg-img-2{
+background-image: url(sec-4-img.jpg);
+min-width: 100%;
+min-height: 30vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.sec-4 button{
+    position: relative;
+    right: 0;
+}
+
+/* sec-4 End */
+
+/* sec-5 */
+
+.bi-emoji-smile,.bi-journal-richtext,.bi-clock,.bi-award{
+font-size: 40px;
+margin-right: 10px;
+color: #ffc451;
+}
+
+/* sec-5 End */
+
+/* media screen */
+@media screen and (min-width:280px) and (max-width:769px){
+    .navbar ,button{
+        position: relative;
+        right: 0%;
+    }
+    .swiper{
+        width: 100%;
+    }
+    .swiper-slide img{
+        width: 48%;
+        position: relative;
+    top: 10px;
+    }
+    .slider{
+        min-height: 70px;
+    }
+    .card-cus .card{
+        margin-top: 130px; 
+    }
+}
+
+@media screen and (min-width:770px) and (max-width:989px){
+    .swiper-slide img{
+        width: 39%;
+        position: relative;
+    top: 8px;
+    }
+    .slider{
+        min-height: 70px;
+    }
+    }
+
+@media screen and (min-width:990px) and (max-width:1200px){
+    .swiper-slide img{
+        width: 39%;
+        position: relative;
+    top: 7px;
+    }
+    .slider{
+        min-height: 70px;
+    }
+    }
+
+
+/* media screen End */
